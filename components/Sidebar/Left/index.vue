@@ -7,8 +7,18 @@
                 </div>
             </nuxt-link>
         </div>
+        <SidebarLeftTab active>
+            <template v-slot:icon>
+                    <HomeIcon />
+                </template>
+                <template v-slot:name>
+                    Home
+                </template>
+        </SidebarLeftTab>
+        
     </div>
 </template>
 <script setup>
-const transition = "transition ease-in-out duration-350"
+import {HomeIcon} from "@heroicons/vue/24/solid"
+const {defaultTransition} = useTailwindConfig()
 </script>
